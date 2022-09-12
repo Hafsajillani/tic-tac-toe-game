@@ -1,0 +1,167 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    box-sizing: border-box;
+}
+body
+{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #74978a; 
+}
+#container
+{
+    height: auto;
+    width: auto;
+    background: #557e71;     
+    padding: 30px;
+    box-shadow: 30px 30px 50px rgba(67, 73, 71, 0.6);
+}
+#startingPage 
+{
+    height: 220px;
+    width: 400px;
+}
+#startingPage h2,
+#wnnner h2
+{
+    font-size: 50px;
+    color: #fefae0;
+}
+#startingPage #line
+{
+    height: 1px;
+    width: 100%;
+    background: #fefae0;
+    margin: 20px 0;
+}
+#startingPage h4
+{
+    font-size: 25px;
+    color: #fefae0;
+}
+#startingPage #button
+{
+    height: auto;
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+}
+#winner
+{
+    display: none;
+}
+#button button 
+{
+    height: 55px;
+    width: 180px;
+    cursor: pointer;
+    background: #8fc0a9;
+    border: none;
+    outline: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transform: scale(1);
+    margin-top: -14px;
+    transition: 0.5s;
+    box-shadow: 2px 2px 2px rgba(225, 225, 225, 0.199), -2px -2px 5px rgb(0 0 0 / 87%);
+}
+#button button:first-child
+{
+    margin-right: 40px;
+}
+#startingPage #button button:hover, 
+#winner #button button:hover
+{
+    transform: scale(0.90);
+}
+#winner #button{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#winner #button button 
+{
+    margin-top: 20px;
+}
+#mainPage
+{
+    height: 550px;
+    width: 350px;
+    padding: 20px;
+    position: relative;
+    display: none;
+}
+#mainPage #headerBtns
+{
+    height: 60px;
+    width: 310px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 2px 2px rgb(225 225 225 / 26%) , -2px -2px 5px rgb(0 0 0 / 87%);
+}
+#mainPage #headerBtns button
+{
+    height: 60px;
+    width: 160px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.60);
+}
+#mainPage #headerBtns #O_Turn
+{
+    left: 160px;
+    z-index: 3;
+}
+#showChange
+{
+    position: absolute;
+    height: 60px;
+    width: 150px;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    background: #6ea191;
+    z-index: 1;
+    transition: 0.5s;
+}
+#gameBoard
+{
+    height: 400px;
+    width: 330px;
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 15px;
+}
+.boxes{
+    height: 100px;
+    width: 100px;
+    box-shadow: 2px 2px 2px rgb(225 225 225 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.boxes i
+{
+    font-size: 60px;
+    color: #8fc0a9;
+}
